@@ -12,6 +12,6 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
-script:
-  - docker run datacom
+# script:
+#   - docker run datacom
 
