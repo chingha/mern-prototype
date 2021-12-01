@@ -11,7 +11,7 @@ export default function Form() {
 
     const createUser = () => {
         // using axios to connect  to the backend -> db
-        Axios.post("http://localhost:3001/createMessage", {
+        Axios.post("http://localhost:3001/get", {
             name,
             email,
             subject,

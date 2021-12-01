@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const UserModel = require("./models/user")
+const UserModel = require("./models/user");
 
 const cors= require ('cors');
 
@@ -12,7 +12,7 @@ app.use (cors());
 mongoose.connect("mongodb+srv://demo:demo123@cluster0.ovn4f.mongodb.net/merndemo?retryWrites=true&w=majority");
 
 // adding user & msg to the db from the frontend
-app.post("/createMessage", async (req, res) => {
+app.post("/get", async (req, res) => {
     const user = req.body
     const newUser = new UserModel(user);
     await newUser.save();
